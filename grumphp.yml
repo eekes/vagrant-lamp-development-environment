@@ -1,0 +1,25 @@
+grumphp:
+  tasks:
+    git_blacklist:
+      keywords:
+        - "die("
+        - "var_dump("
+        - "print_r("
+        - "print("
+        - "dump("
+        - "debug_backtrace("
+        - "exit;"
+        - "exit();"
+        - "echo "
+        - "console.log("
+        - " dd("
+    phpcsfixer2:
+      allow_risky: true
+      verbose: true
+      config: ./.php_cs
+    phpstan:
+      autoload_file: ./vendor/autoload.php
+    yamllint: ~
+    jsonlint:
+      detect_key_conflicts: true
+    xmllint: ~
